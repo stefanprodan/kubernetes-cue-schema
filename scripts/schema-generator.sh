@@ -62,7 +62,7 @@ find ${APIDIR} -empty -type d -delete
 # Move generated files to schemas.
 rm -rf ${DSTDIR}
 mkdir -p ${DSTDIR}
-K8SDIR="./cue.mod/gen/k8s.io"
+K8SDIR="./cue.mod/gen"
 mv ${K8SDIR}/*  ${DSTDIR}/
 
 # Validate schemas.
