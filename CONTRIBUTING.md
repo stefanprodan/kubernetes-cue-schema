@@ -15,26 +15,28 @@ Origin ([DCO](DCO)). This document was created by the Linux Kernel community and
 simple statement that you, as a contributor, have the legal right to make the
 contribution.
 
-## How to run the schema generators
+## How to update the schemas
 
 Prerequisites:
 
 * go >= 1.21
 * cue >= 0.6
 * make >= 4.4
+* kubectl >= 1.28
 
-Run the generator with:
+To generate the Kubernetes CUE schemas for the version of your kubectl binary run:
 
 ```shell
-make
+make gen
 ```
+
+Preview the changes with `git diff`, commit, push and open a PR with the new schemas.
 
 ## Acceptance policy
 
 These things will make a PR more likely to be accepted:
 
 - a well-described requirement
-- new code and tests follow the conventions in old code and tests
 - a good commit message (see below)
 
 In general, we will merge a PR once one maintainer has endorsed it.
