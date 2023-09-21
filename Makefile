@@ -11,7 +11,12 @@ DEV_VERSION?=0.0.0-$(shell git rev-parse --short HEAD).$(shell date +%s)
 # API gen tool
 CONTROLLER_GEN_VERSION ?= v0.13.0
 
-all: test build
+all: gen
+
+gen: ## Generate schemas using the local kubectl version.
+	@KVER=$(shell kubectl version --client -ojson | jq -r .clientVersion.gitVersion)
+	@echo "Using k8s.io/api@$${KVER/v1/v0}"
+	@./scripts/schema-generator.sh $${KVER/v1/v0}
 
 tidy: ## Tidy Go modules.
 	rm -f go.sum; go mod tidy -compat=1.21
