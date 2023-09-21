@@ -65,4 +65,8 @@ mkdir -p ${DSTDIR}
 K8SDIR="./cue.mod/gen/k8s.io"
 mv ${K8SDIR}/*  ${DSTDIR}/
 
+# Validate schemas.
+cd ${DSTDIR}
+cue vet ./... --concrete --strict
+
 echo "CUE schemas wrote to 'schemas/v1.${MINORVERSION}' size $(du -sh ${DSTDIR}/ | cut -f1)"
