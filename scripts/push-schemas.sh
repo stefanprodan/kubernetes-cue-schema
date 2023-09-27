@@ -16,28 +16,20 @@ diff_push() {
     --path="${artifact_path}" &>/dev/null || diff_exit_code=$?
 
   if [[  ${diff_exit_code} -ne 0 ]]; then
-    flux_output=$(flux push artifact ${artifact_repo}:${artifact_version} \
-      --path="${artifact_path}" \
-      --source="https://github.com/stefanprodan/kubernetes-cue-schema" \
-      --annotations='org.opencontainers.image.licenses=Apache-2.0' \
-      --annotations='org.opencontainers.image.documentation=https://timoni.sh' \
-      --annotations='org.opencontainers.image.description=Kubernetes CUE Schemas for timoni.sh' \
-      --revision="$(git branch --show-current)@sha1:$(git rev-parse HEAD)" 2>&1) || exit_code=$?
-
-     oci_url=$(echo ${flux_output} | tail -n1 | awk '/to/{print $NF}')
-
-     flux tag artifact ${artifact_repo}:${artifact_version} --tag=latest
+    timoni artifact push ${artifact_repo} \
+    		-f ${artifact_path} -t ${artifact_version} -t latest \
+    		-a="org.opencontainers.image.source=https://github.com/stefanprodan/kubernetes-cue-schema" \
+    		-a="org.opencontainers.image.revision=$(git branch --show-current)@sha1:$(git rev-parse HEAD)" \
+    		-a="org.opencontainers.image.licenses=Apache-2.0" \
+    		-a="org.opencontainers.image.documentation=https://timoni.sh" \
+    		-a="org.opencontainers.image.description=Kubernetes CUE Schemas for timoni.sh" \
+    		--content-type="cue.mod/gen"
   else
     echo "✔ no changes detected in ${artifact_path}"
     return
   fi
 
-  if [[  ${exit_code} -ne 0 ]]; then
-    echo ${flux_output}
-    exit 1
-  fi
-
-  echo "✔ pushed to ${oci_url}"
+  echo "✔ pushed to ${artifact_repo}:${artifact_version}"
 }
 
 for dir in ${BASEDIR}/schemas/*/
