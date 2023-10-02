@@ -23,7 +23,9 @@ diff_push() {
     		-a="org.opencontainers.image.licenses=Apache-2.0" \
     		-a="org.opencontainers.image.documentation=https://timoni.sh" \
     		-a="org.opencontainers.image.description=Kubernetes CUE Schemas for timoni.sh" \
-    		--content-type="cue.mod/gen"
+    		--content-type="cue.mod/gen" \
+    		--sign=cosign
+
   else
     echo "✔ no changes detected in ${artifact_path}"
     return
