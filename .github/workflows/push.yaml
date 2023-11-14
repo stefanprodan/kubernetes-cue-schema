@@ -16,11 +16,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - name: Setup Cosign
-        uses: sigstore/cosign-installer@11086d25041f77fe8fe7b9ea4e48e3b9192b8f19 # v3.1.2
+        uses: sigstore/cosign-installer@1fc5bd396d372bee37d608f955b336615edf79c8 # v3.2.0
       - name: Setup Flux
         uses: fluxcd/flux2/action@a18d4f345021182d6516bf3e8e00210567f46ab5 #v2.1.2
       - name: Setup Timoni
-        uses: stefanprodan/timoni/actions/setup@c1caaf566de0cacb3936a7b5764d9c7701a0c3b4 #v0.15.0
+        uses: stefanprodan/timoni/actions/setup@98b0744539d52a26d12fdd44b29c2e9fdcd0b0e3 #v0.16.0
       - name: Login to GHCR
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
