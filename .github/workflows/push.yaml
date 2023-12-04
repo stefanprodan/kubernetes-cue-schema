@@ -20,7 +20,7 @@ jobs:
       - name: Setup Flux
         uses: fluxcd/flux2/action@a18d4f345021182d6516bf3e8e00210567f46ab5 #v2.1.2
       - name: Setup Timoni
-        uses: stefanprodan/timoni/actions/setup@98b0744539d52a26d12fdd44b29c2e9fdcd0b0e3 #v0.16.0
+        uses: stefanprodan/timoni/actions/setup@3798930eae2a962fdb5a12309062e46fc73ad78b #v0.17.0
       - name: Login to GHCR
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
