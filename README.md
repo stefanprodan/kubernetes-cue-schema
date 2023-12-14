@@ -37,6 +37,7 @@ The schema of each Kubernetes **minor version** is published to GitHub Container
 
 OCI artifacts:
 
+- `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.29`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.28`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.27`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.26`
