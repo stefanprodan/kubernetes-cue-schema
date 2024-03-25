@@ -14,15 +14,15 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       - name: Setup Cosign
         uses: sigstore/cosign-installer@e1523de7571e31dbe865fd2e80c5c7c23ae71eb4 # v3.4.0
       - name: Setup Flux
         uses: fluxcd/flux2/action@534684601ec8888beb0cc4f51117b59e97606c4d #v2.2.3
       - name: Setup Timoni
-        uses: stefanprodan/timoni/actions/setup@3844e0360fe45a9a1081445d7f586e8b6e682e50 #v0.19.0
+        uses: stefanprodan/timoni/actions/setup@7f033d917314b4c0fa27e010ab04e35637c8405f #v0.20.0
       - name: Login to GHCR
-        uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
+        uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3.1.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
