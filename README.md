@@ -25,6 +25,7 @@ Kubernetes API schemas:
 - `k8s.io/api/core/v1`
 - `k8s.io/api/discovery/v1`
 - `k8s.io/api/events/v1`
+- `k8s.io/api/flowcontrol/v1`
 - `k8s.io/api/networking/v1`
 - `k8s.io/api/node/v1`
 - `k8s.io/api/policy/v1`
@@ -37,6 +38,7 @@ The schema of each Kubernetes **minor version** is published to GitHub Container
 
 OCI artifacts:
 
+- `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.30`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.29`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.28`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.27`
