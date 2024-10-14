@@ -14,6 +14,7 @@ Kubernetes API schemas:
 
 - `k8s.io/api/admission/v1`
 - `k8s.io/api/admissionregistration/v1`
+- `k8s.io/api/apidiscovery/v2`
 - `k8s.io/api/apps/v1`
 - `k8s.io/api/authentication/v1`
 - `k8s.io/api/authorization/v1`
@@ -38,6 +39,7 @@ The schema of each Kubernetes **minor version** is published to GitHub Container
 
 OCI artifacts:
 
+- `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.31`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.30`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.29`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.28`
