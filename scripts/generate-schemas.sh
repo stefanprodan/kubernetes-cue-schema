@@ -23,7 +23,7 @@ echo "Generating CUE schemas for Kubernetes v1.${MINORVERSION}"
 tee go.mod >/dev/null <<EOF
 module timoni.sh/k8s
 
-go 1.21
+go 1.23
 
 require (
 	k8s.io/api ${VERSION}
