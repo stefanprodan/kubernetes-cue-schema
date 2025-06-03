@@ -18,9 +18,9 @@ jobs:
       - name: Setup Cosign
         uses: sigstore/cosign-installer@3454372f43399081ed03b604cb2d021dabca52bb # v3.8.2
       - name: Setup Flux
-        uses: fluxcd/flux2/action@8d5f40dca5aa5d3c0fc3414457dda15a0ac92fa4 #v2.5.1
+        uses: fluxcd/flux2/action@b73c7f7191086ca7629840e680e71873349787f8 #v2.6.1
       - name: Setup Timoni
-        uses: stefanprodan/timoni/actions/setup@2fc83e471e741041ad1c57bef9ab50bf27c707a7 #v0.24.0
+        uses: stefanprodan/timoni/actions/setup@2f062914bee7456931d759ceb9ac49f100329d15 #v0.25.0
       - name: Login to GHCR
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
         with:
