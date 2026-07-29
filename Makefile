@@ -1,7 +1,8 @@
 # kubernetes-cue-schema makefile
 
+SHELL := /bin/bash
 .ONESHELL:
-.SHELLFLAGS += -e
+.SHELLFLAGS := -ec
 
 all: gen
 

@@ -59,14 +59,19 @@ find ${APIDIR} -name 'v1beta*' -type d -prune -exec rm -rf {} +
 find ${APIDIR} -name 'v2beta*' -type d -prune -exec rm -rf {} +
 find ${APIDIR} -empty -type d -delete
 
+K8SDIR="./cue.mod/gen"
+
+# Validate schemas. This has to happen while the packages are still inside the
+# CUE module, as CUE resolves the k8s.io import paths relative to cue.mod/gen.
+PKGS=$(cd ${K8SDIR} && find . -name '*.cue' | sed -e 's|/[^/]*$||' -e 's|^\./||' | sort -u)
+echo "Validating $(echo "${PKGS}" | wc -l) CUE packages"
+for pkg in ${PKGS}; do
+	cue vet ${pkg} --concrete
+done
+
 # Move generated files to schemas.
 rm -rf ${DSTDIR}
 mkdir -p ${DSTDIR}
-K8SDIR="./cue.mod/gen"
 mv ${K8SDIR}/*  ${DSTDIR}/
-
-# Validate schemas.
-cd ${DSTDIR}
-cue vet ./... --concrete --strict
 
 echo "CUE schemas wrote to 'schemas/v1.${MINORVERSION}' size $(du -sh ${DSTDIR}/ | cut -f1)"
