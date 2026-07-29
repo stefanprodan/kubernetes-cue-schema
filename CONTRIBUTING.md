@@ -19,8 +19,8 @@ contribution.
 
 Prerequisites:
 
-* go >= 1.21
-* cue >= 0.6
+* go >= 1.26
+* cue >= 0.16
 * make >= 4.4
 * kubectl >= 1.28
 
