@@ -16,7 +16,7 @@ import (
 // StorageClasses are non-namespaced; the name of the storage class
 // according to etcd is in ObjectMeta.Name.
 #StorageClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -73,7 +73,7 @@ import (
 
 // StorageClassList is a collection of storage classes.
 #StorageClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -107,7 +107,7 @@ import (
 //
 // VolumeAttachment objects are non-namespaced.
 #VolumeAttachment: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -129,7 +129,7 @@ import (
 
 // VolumeAttachmentList is a collection of VolumeAttachment objects.
 #VolumeAttachmentList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -231,7 +231,7 @@ import (
 // Kubelet uses this object to determine whether pod information needs to be passed on mount.
 // CSIDriver objects are non-namespaced.
 #CSIDriver: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// metadata.Name indicates the name of the CSI driver that this object
@@ -249,7 +249,7 @@ import (
 
 // CSIDriverList is a collection of CSIDriver objects.
 #CSIDriverList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -558,7 +558,7 @@ import (
 // enough that it doesn't create this object.
 // CSINode has an OwnerReference that points to the corresponding node object.
 #CSINode: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// metadata.name must be the Kubernetes node name.
@@ -703,7 +703,7 @@ import (
 
 // CSINodeList is a collection of CSINode objects.
 #CSINodeList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -739,7 +739,7 @@ import (
 // the scheduler assumes that capacity is insufficient and tries some other
 // node.
 #CSIStorageCapacity: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// The name has no particular meaning. It must be a DNS subdomain (dots allowed, 253 characters).
@@ -799,7 +799,7 @@ import (
 
 // CSIStorageCapacityList is a collection of CSIStorageCapacity objects.
 #CSIStorageCapacityList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -814,7 +814,7 @@ import (
 // defined by the CSI driver. The class can be specified during dynamic provisioning
 // of PersistentVolumeClaims, and changed in the PersistentVolumeClaim spec after provisioning.
 #VolumeAttributesClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -843,7 +843,7 @@ import (
 
 // VolumeAttributesClassList is a collection of VolumeAttributesClass objects.
 #VolumeAttributesClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

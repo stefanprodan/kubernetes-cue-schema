@@ -57,7 +57,7 @@ import (
 // plugin in the kube-apiserver.
 // +k8s:supportsSubresource="/status"
 #TokenReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -153,7 +153,7 @@ import (
 
 // TokenRequest requests a token for a given service account.
 #TokenRequest: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -241,7 +241,7 @@ import (
 // request header authentication is used, any extra keys will have their case ignored and returned as lowercase.
 // +k8s:supportsSubresource="/status"
 #SelfSubjectReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

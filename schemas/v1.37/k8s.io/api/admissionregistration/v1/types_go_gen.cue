@@ -142,7 +142,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // ValidatingAdmissionPolicy describes the definition of an admission validation policy that accepts or rejects an object without changing it.
 // +k8s:supportsSubresource="/status"
 #ValidatingAdmissionPolicy: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -207,7 +207,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ValidatingAdmissionPolicyList is a list of ValidatingAdmissionPolicy.
 #ValidatingAdmissionPolicyList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -455,7 +455,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // Adding/removing policies, bindings, or params can not affect whether a
 // given (policy, binding, param) combination is within its own CEL budget.
 #ValidatingAdmissionPolicyBinding: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -468,7 +468,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ValidatingAdmissionPolicyBindingList is a list of ValidatingAdmissionPolicyBinding.
 #ValidatingAdmissionPolicyBindingList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -732,13 +732,12 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	// +optional
 	resourceNames?: [...string] @go(ResourceNames,[]string) @protobuf(1,bytes,rep)
 
-	// RuleWithOperations is a tuple of Operations and Resources.
-	RuleWithOperations: #RuleWithOperations @protobuf(2,bytes,opt,name=ruleWithOperations)
+	#RuleWithOperations
 }
 
 // ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and object without changing it.
 #ValidatingWebhookConfiguration: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -755,7 +754,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 #ValidatingWebhookConfigurationList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -768,7 +767,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or reject and may change the object.
 #MutatingWebhookConfiguration: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -785,7 +784,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 #MutatingWebhookConfigurationList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1116,7 +1115,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // MutatingAdmissionPolicy describes the definition of an admission mutation policy that mutates the object coming into admission chain.
 #MutatingAdmissionPolicy: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -1128,7 +1127,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // MutatingAdmissionPolicyList is a list of MutatingAdmissionPolicy.
 #MutatingAdmissionPolicyList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1388,7 +1387,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // Adding/removing policies, bindings, or params can not affect whether a
 // given (policy, binding, param) combination is within its own CEL budget.
 #MutatingAdmissionPolicyBinding: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
 	// +optional
@@ -1400,7 +1399,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // MutatingAdmissionPolicyBindingList is a list of MutatingAdmissionPolicyBinding.
 #MutatingAdmissionPolicyBindingList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1466,9 +1465,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	// +listType=atomic
 	operations?: [...#OperationType] @go(Operations,[]OperationType) @protobuf(1,bytes,rep,casttype=OperationType)
 
-	// Rule is embedded, it describes other criteria of the rule, like
-	// APIGroups, APIVersions, Resources, etc.
-	Rule: #Rule @protobuf(2,bytes,opt,name=rule)
+	#Rule
 }
 
 // OperationType specifies an operation for a request.

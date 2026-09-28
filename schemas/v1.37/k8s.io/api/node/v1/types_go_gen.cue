@@ -17,7 +17,7 @@ import (
 // pod.  For more details, see
 // https://kubernetes.io/docs/concepts/containers/runtime-class/
 #RuntimeClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -85,7 +85,7 @@ import (
 
 // RuntimeClassList is a list of RuntimeClass objects.
 #RuntimeClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

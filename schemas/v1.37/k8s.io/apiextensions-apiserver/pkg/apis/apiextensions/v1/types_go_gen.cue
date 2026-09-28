@@ -424,7 +424,7 @@ import (
 // CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format
 // <.spec.name>.<.spec.group>.
 #CustomResourceDefinition: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -441,7 +441,7 @@ import (
 
 // CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 #CustomResourceDefinitionList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -510,7 +510,7 @@ import (
 
 // ConversionReview describes a conversion request/response.
 #ConversionReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// request describes the attributes for the conversion request.
 	// +optional

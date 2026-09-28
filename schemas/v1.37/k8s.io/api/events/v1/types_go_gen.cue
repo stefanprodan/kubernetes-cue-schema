@@ -16,7 +16,7 @@ import (
 // continued existence of events with that Reason.  Events should be
 // treated as informative, best-effort, supplemental data.
 #Event: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -99,7 +99,7 @@ import (
 
 // EventList is a list of Event objects.
 #EventList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

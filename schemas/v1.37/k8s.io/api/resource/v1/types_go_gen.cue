@@ -77,7 +77,7 @@ import (
 // For resources that are not local to a node, the node name is not set. Instead,
 // the driver may use a node selector to specify where the devices are available.
 #ResourceSlice: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata
 	// +optional
@@ -966,7 +966,7 @@ import (
 // in the ResourceSlice by the DRA driver.
 // +k8s:supportsSubresource="/status"
 #DeviceTaintRule: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata
 	// +optional
@@ -1072,7 +1072,7 @@ import (
 
 // DeviceTaintRuleList is a collection of DeviceTaintRules.
 #DeviceTaintRuleList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// +optional
@@ -1084,7 +1084,7 @@ import (
 
 // ResourceSliceList is a collection of ResourceSlices.
 #ResourceSliceList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// +optional
@@ -1100,7 +1100,7 @@ import (
 // stanza tracks whether this claim has been satisfied and what specific
 // resources have been allocated.
 #ResourceClaim: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata
 	// +optional
@@ -1781,7 +1781,8 @@ import (
 	// +k8s:beta(since: "1.37")=+k8s:unique=set
 	// +k8s:beta(since: "1.37")=+k8s:maxItems=32
 	requests?: [...string] @go(Requests,[]string) @protobuf(1,bytes,opt)
-	DeviceConfiguration: #DeviceConfiguration @protobuf(2,bytes,name=deviceConfiguration)
+
+	#DeviceConfiguration
 }
 
 // DeviceConfiguration must have exactly one field set. It gets embedded
@@ -2180,7 +2181,8 @@ import (
 	// +k8s:beta(since: "1.37")=+k8s:unique=set
 	// +k8s:beta(since: "1.37")=+k8s:maxItems=32
 	requests?: [...string] @go(Requests,[]string) @protobuf(2,bytes,opt)
-	DeviceConfiguration: #DeviceConfiguration @protobuf(3,bytes,name=deviceConfiguration)
+
+	#DeviceConfiguration
 }
 
 // +enum
@@ -2196,7 +2198,7 @@ import (
 
 // ResourceClaimList is a collection of claims.
 #ResourceClaimList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// +optional
@@ -2211,7 +2213,7 @@ import (
 // the device requests of a claim to apply these presets.
 // Cluster scoped.
 #DeviceClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata
 	// +optional
@@ -2272,12 +2274,12 @@ import (
 
 // DeviceClassConfiguration is used in DeviceClass.
 #DeviceClassConfiguration: {
-	DeviceConfiguration: #DeviceConfiguration @protobuf(1,bytes,opt,name=deviceConfiguration)
+	#DeviceConfiguration
 }
 
 // DeviceClassList is a collection of classes.
 #DeviceClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// +optional
@@ -2289,7 +2291,7 @@ import (
 
 // ResourceClaimTemplate is used to produce ResourceClaim objects.
 #ResourceClaimTemplate: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata
 	// +optional
@@ -2322,7 +2324,7 @@ import (
 
 // ResourceClaimTemplateList is a collection of claim templates.
 #ResourceClaimTemplateList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// +optional

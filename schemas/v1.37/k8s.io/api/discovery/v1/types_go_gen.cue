@@ -16,7 +16,7 @@ import (
 // by listing EndpointSlices in the service's namespace whose `kubernetes.io/service-name`
 // label contains the service's name.
 #EndpointSlice: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// +optional
@@ -222,7 +222,7 @@ import (
 
 // EndpointSliceList represents a list of endpoint slices
 #EndpointSliceList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// +optional

@@ -56,7 +56,7 @@ _#labelPrefix: "batch.kubernetes.io/"
 // Job represents the configuration of a single job.
 // +k8s:supportsSubresource="/status"
 #Job: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -76,7 +76,7 @@ _#labelPrefix: "batch.kubernetes.io/"
 
 // JobList is a collection of jobs.
 #JobList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -756,7 +756,7 @@ _#labelPrefix: "batch.kubernetes.io/"
 // CronJob represents the configuration of a single cron job.
 // +k8s:supportsSubresource="/status"
 #CronJob: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -776,7 +776,7 @@ _#labelPrefix: "batch.kubernetes.io/"
 
 // CronJobList is a collection of cron jobs.
 #CronJobList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

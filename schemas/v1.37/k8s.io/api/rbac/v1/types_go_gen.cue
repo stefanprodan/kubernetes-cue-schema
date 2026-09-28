@@ -95,7 +95,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // Role is a namespaced, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding.
 #Role: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// +optional
@@ -112,7 +112,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // It adds who information via Subjects and namespace information by which namespace it exists in.  RoleBindings in a given
 // namespace only have effect in that namespace.
 #RoleBinding: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// +optional
@@ -134,7 +134,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // RoleBindingList is a collection of RoleBindings
 #RoleBindingList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// +optional
@@ -146,7 +146,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // RoleList is a collection of Roles
 #RoleList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// +optional
@@ -158,7 +158,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ClusterRole is a cluster level, logical grouping of PolicyRules that can be referenced as a unit by a RoleBinding or ClusterRoleBinding.
 #ClusterRole: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// +optional
@@ -189,7 +189,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // ClusterRoleBinding references a ClusterRole, but not contain it.  It can reference a ClusterRole in the global namespace,
 // and adds who information via Subject.
 #ClusterRoleBinding: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// +optional
@@ -211,7 +211,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ClusterRoleBindingList is a collection of ClusterRoleBindings
 #ClusterRoleBindingList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// +optional
@@ -223,7 +223,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // ClusterRoleList is a collection of ClusterRoles
 #ClusterRoleList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// +optional

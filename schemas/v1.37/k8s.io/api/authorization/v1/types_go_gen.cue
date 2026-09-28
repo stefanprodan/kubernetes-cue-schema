@@ -9,7 +9,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // SubjectAccessReview checks whether or not a user or group can perform an action.
 // +k8s:supportsSubresource="/status"
 #SubjectAccessReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -30,7 +30,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // to check whether they can perform an action
 // +k8s:supportsSubresource="/status"
 #SelfSubjectAccessReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -51,7 +51,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // checking.
 // +k8s:supportsSubresource="/status"
 #LocalSubjectAccessReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -262,7 +262,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // SubjectAccessReview, and LocalAccessReview are the correct way to defer authorization decisions to the API server.
 // +k8s:supportsSubresource="/status"
 #SelfSubjectRulesReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

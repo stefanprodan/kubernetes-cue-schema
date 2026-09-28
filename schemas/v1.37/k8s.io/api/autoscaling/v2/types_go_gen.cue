@@ -15,7 +15,7 @@ import (
 // implementing the scale subresource based on the metrics specified.
 // +k8s:supportsSubresource="/status"
 #HorizontalPodAutoscaler: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -626,7 +626,7 @@ import (
 
 // HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 #HorizontalPodAutoscalerList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard list metadata.
 	// +optional
