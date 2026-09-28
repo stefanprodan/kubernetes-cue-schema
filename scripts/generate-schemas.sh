@@ -46,6 +46,19 @@ EOF
 # Download the Kubernetes packages for the given version.
 go mod tidy
 
+# Replace the Kubernetes modules with local copies in which the embedded
+# structs tagged with an empty JSON name are marked as inline, as cue get go
+# only embeds the inline ones.
+for mod in k8s.io/api k8s.io/apiextensions-apiserver k8s.io/apimachinery; do
+	src=$(go list -m -f '{{.Dir}}' ${mod})
+	mkdir -p "./replace/${mod}"
+	cp -R "${src}/." "./replace/${mod}/"
+	chmod -R u+w "./replace/${mod}"
+	find "./replace/${mod}" -name '*.go' -exec perl -i -pe 's/^(\s+[\w.]+\s+`json:)""/$1",inline"/' {} +
+	go mod edit -replace "${mod}=./replace/${mod}"
+done
+go mod tidy
+
 # Generate the CUE schemas from the Kubernetes API Go packages.
 cue mod init "timoni.sh/k8s"
 cue get go k8s.io/api/...

@@ -74,7 +74,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // similar attributes and is identified by a pair of strings: the name of the FlowSchema and a "flow distinguisher".
 // +k8s:supportsSubresource="/status"
 #FlowSchema: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// `metadata` is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -94,7 +94,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // FlowSchemaList is a list of FlowSchema objects.
 #FlowSchemaList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// `metadata` is the standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -382,7 +382,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // PriorityLevelConfiguration represents the configuration of a priority level.
 // +k8s:supportsSubresource="/status"
 #PriorityLevelConfiguration: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// `metadata` is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -402,7 +402,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // PriorityLevelConfigurationList is a list of PriorityLevelConfiguration objects.
 #PriorityLevelConfigurationList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// `metadata` is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

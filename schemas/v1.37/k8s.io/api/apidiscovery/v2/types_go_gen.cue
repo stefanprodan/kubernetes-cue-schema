@@ -11,7 +11,7 @@ import "k8s.io/apimachinery/pkg/apis/meta/v1"
 // list of API resources (built-ins, Custom Resource Definitions, resources from aggregated servers)
 // that a cluster supports.
 #APIGroupDiscoveryList: {
-	TypeMeta: v1.#TypeMeta
+	v1.#TypeMeta
 
 	// ResourceVersion will not be set, because this does not have a replayable ordering among multiple apiservers.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -27,7 +27,7 @@ import "k8s.io/apimachinery/pkg/apis/meta/v1"
 // It contains a list of APIVersionDiscovery that holds a list of APIResourceDiscovery types served for a version.
 // Versions are in descending order of preference, with the first version being the preferred entry.
 #APIGroupDiscovery: {
-	TypeMeta: v1.#TypeMeta
+	v1.#TypeMeta
 
 	// metadata is standard object's metadata.
 	// The only field completed will be name. For instance, resourceVersion will be empty.

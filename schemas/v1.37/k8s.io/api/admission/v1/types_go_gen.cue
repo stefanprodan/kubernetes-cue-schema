@@ -13,7 +13,7 @@ import (
 
 // AdmissionReview describes an admission review request/response.
 #AdmissionReview: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// request describes the attributes for the admission request.
 	// +optional

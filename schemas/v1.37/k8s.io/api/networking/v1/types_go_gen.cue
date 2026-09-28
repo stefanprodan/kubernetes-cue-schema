@@ -12,7 +12,7 @@ import (
 
 // NetworkPolicy describes what network traffic is allowed for a set of Pods
 #NetworkPolicy: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -206,7 +206,7 @@ import (
 
 // NetworkPolicyList is a list of NetworkPolicy objects.
 #NetworkPolicyList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -223,7 +223,7 @@ import (
 // based virtual hosting etc.
 // +k8s:supportsSubresource="/status"
 #Ingress: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -243,7 +243,7 @@ import (
 
 // IngressList is a collection of Ingress.
 #IngressList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -395,13 +395,7 @@ import (
 	// +optional
 	host?: string @go(Host) @protobuf(1,bytes,opt)
 
-	// IngressRuleValue represents a rule to route requests for this IngressRule.
-	// If unspecified, the rule defaults to a http catch-all. Whether that sends
-	// just traffic matching the host to the default backend or all traffic to the
-	// default backend, is left to the controller fulfilling the Ingress. Http is
-	// currently the only supported IngressRuleValue.
-	// +optional
-	IngressRuleValue?: #IngressRuleValue @protobuf(2,bytes,opt,name=ingressRuleValue)
+	#IngressRuleValue
 }
 
 // IngressRuleValue represents a rule to apply against incoming requests. If the
@@ -536,7 +530,7 @@ import (
 // single IngressClass resource has this annotation set to true, new Ingress
 // resources without a class specified will be assigned this default class.
 #IngressClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -608,7 +602,7 @@ import (
 
 // IngressClassList is a collection of IngressClasses.
 #IngressClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// +optional
@@ -626,7 +620,7 @@ import (
 // Valid: 192.168.1.5 or 2001:db8::1 or 2001:db8:aaaa:bbbb:cccc:dddd:eeee:1
 // Invalid: 10.01.2.3 or 2001:db8:0:0:0::1
 #IPAddress: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -672,7 +666,7 @@ import (
 
 // IPAddressList contains a list of IPAddress.
 #IPAddressList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -687,7 +681,7 @@ import (
 // This range is used to allocate ClusterIPs to Service objects.
 // +k8s:supportsSubresource="/status"
 #ServiceCIDR: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -738,7 +732,7 @@ import (
 
 // ServiceCIDRList contains a list of ServiceCIDR objects.
 #ServiceCIDRList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

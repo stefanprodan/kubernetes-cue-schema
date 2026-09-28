@@ -11,7 +11,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // including scheduling, preemption, eviction and other phases.
 // Workload API enablement is toggled by the GenericWorkload feature gate.
 #Workload: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -27,7 +27,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // WorkloadList contains a list of Workload resources.
 #WorkloadList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	//
@@ -472,7 +472,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // Workload.podGroupTemplates.
 // PodGroup API enablement is toggled by the GenericWorkload feature gate.
 #PodGroup: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -493,7 +493,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // PodGroupList contains a list of PodGroup resources.
 #PodGroupList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	//
@@ -1128,7 +1128,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // Workload.compositePodGroupTemplates.
 // CompositePodGroup API enablement is toggled by the CompositePodGroup feature gate.
 #CompositePodGroup: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -1149,7 +1149,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // CompositePodGroupList contains a list of CompositePodGroup resources.
 #CompositePodGroupList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	//

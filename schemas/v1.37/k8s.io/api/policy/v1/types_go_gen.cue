@@ -164,7 +164,7 @@ import (
 // PodDisruptionBudget is an object to define the max disruption that can be caused to a collection of pods
 // +k8s:supportsSubresource="/status"
 #PodDisruptionBudget: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -182,7 +182,7 @@ import (
 
 // PodDisruptionBudgetList is a collection of PodDisruptionBudgets.
 #PodDisruptionBudgetList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -197,7 +197,7 @@ import (
 // This is a subresource of Pod.  A request to cause such an eviction is
 // created by POSTing to .../pods/<pod name>/evictions.
 #Eviction: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata describes the pod that is being evicted.
 	// +optional

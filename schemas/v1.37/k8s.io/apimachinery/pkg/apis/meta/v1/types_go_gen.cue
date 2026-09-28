@@ -337,7 +337,7 @@ import (
 
 // ListOptions is the query options to a standard REST list call.
 #ListOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// A selector to restrict the list of returned objects by their labels.
 	// Defaults to everything.
@@ -510,7 +510,7 @@ import (
 
 // GetOptions is the standard query options to the standard REST get call.
 #GetOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// resourceVersion sets a constraint on what resource versions a request may be served from.
 	// See https://kubernetes.io/docs/reference/using-api/api-concepts/#resource-versions for
@@ -550,7 +550,7 @@ import (
 
 // DeleteOptions may be provided when deleting an API object.
 #DeleteOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// The duration in seconds before the object should be deleted. Value must be non-negative integer.
 	// The value zero indicates delete immediately. If this value is nil, the default grace period for the
@@ -619,7 +619,7 @@ import (
 
 // CreateOptions may be provided when creating an API object.
 #CreateOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// When present, indicates that modifications should not be
 	// persisted. An invalid or unrecognized dryRun directive will
@@ -660,7 +660,7 @@ import (
 // PatchOptions may be provided when patching an API object.
 // PatchOptions is meant to be a superset of UpdateOptions.
 #PatchOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// When present, indicates that modifications should not be
 	// persisted. An invalid or unrecognized dryRun directive will
@@ -712,7 +712,7 @@ import (
 // ApplyOptions is equivalent to PatchOptions. It is provided as a convenience with documentation
 // that speaks specifically to how the options fields relate to apply.
 #ApplyOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// When present, indicates that modifications should not be
 	// persisted. An invalid or unrecognized dryRun directive will
@@ -738,7 +738,7 @@ import (
 // UpdateOptions may be provided when updating an API object.
 // All fields in UpdateOptions should also be present in PatchOptions.
 #UpdateOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// When present, indicates that modifications should not be
 	// persisted. An invalid or unrecognized dryRun directive will
@@ -789,7 +789,7 @@ import (
 
 // Status is a return value for calls that don't return other objects.
 #Status: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1161,7 +1161,7 @@ import (
 
 // List holds a list of objects, which may not be known by the server.
 #List: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1178,7 +1178,7 @@ import (
 // +protobuf.options.(gogoproto.goproto_stringer)=false
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 #APIVersions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// versions are the api versions that are available.
 	// +listType=atomic
@@ -1198,7 +1198,7 @@ import (
 // APIGroupList is a list of APIGroup, to allow clients to discover the API at
 // /apis.
 #APIGroupList: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// groups is a list of APIGroup.
 	// +listType=atomic
@@ -1208,7 +1208,7 @@ import (
 // APIGroup contains the name, the supported versions, and the preferred version
 // of a group.
 #APIGroup: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// name is the name of the group.
 	name: string @go(Name) @protobuf(1,bytes,opt)
@@ -1312,7 +1312,7 @@ import (
 // resources supported in a specific group and version, and if the resource
 // is namespaced.
 #APIResourceList: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// groupVersion is the group and version this APIResourceList is for.
 	groupVersion: string @go(GroupVersion) @protobuf(1,bytes,opt)
@@ -1475,7 +1475,7 @@ import (
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // +protobuf=false
 #Table: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1609,7 +1609,7 @@ import (
 // +k8s:conversion-gen:explicit-from=net/url.Values
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 #TableOptions: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// includeObject decides whether to include each object along with its columnar information.
 	// Specifying "None" will return no object, specifying "Object" will return the full object contents, and
@@ -1622,7 +1622,7 @@ import (
 // to get access to a particular ObjectMeta schema without knowing the details of the version.
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 #PartialObjectMetadata: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -1634,7 +1634,7 @@ import (
 // PartialObjectMetadataList contains a list of objects containing only their metadata
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 #PartialObjectMetadataList: {
-	TypeMeta: #TypeMeta
+	#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds

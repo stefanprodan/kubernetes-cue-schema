@@ -12,7 +12,7 @@ import (
 // PriorityClass defines mapping from a priority class name to the priority
 // integer value. The value can be any valid integer.
 #PriorityClass: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata is the standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -46,7 +46,7 @@ import (
 
 // PriorityClassList is a collection of priority classes.
 #PriorityClassList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

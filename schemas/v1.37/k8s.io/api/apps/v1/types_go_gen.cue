@@ -28,7 +28,7 @@ import (
 // +k8s:supportsSubresource="/scale"
 // +k8s:supportsSubresource="/status"
 #StatefulSet: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -372,7 +372,7 @@ import (
 
 // StatefulSetList is a collection of StatefulSets.
 #StatefulSetList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -387,7 +387,7 @@ import (
 // +k8s:supportsSubresource="/scale"
 // +k8s:supportsSubresource="/status"
 #Deployment: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -613,7 +613,7 @@ import (
 
 // DeploymentList is a list of Deployments.
 #DeploymentList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// +optional
@@ -812,7 +812,7 @@ import (
 // DaemonSet represents the configuration of a daemon set.
 // +k8s:supportsSubresource="/status"
 #DaemonSet: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -840,7 +840,7 @@ import (
 
 // DaemonSetList is a collection of daemon sets.
 #DaemonSetList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -855,7 +855,7 @@ import (
 // +k8s:supportsSubresource="/scale"
 // +k8s:supportsSubresource="/status"
 #ReplicaSet: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// If the Labels of a ReplicaSet are empty, they are defaulted to
 	// be the same as the Pod(s) that the ReplicaSet manages.
@@ -880,7 +880,7 @@ import (
 
 // ReplicaSetList is a collection of ReplicaSets.
 #ReplicaSetList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
@@ -1002,7 +1002,7 @@ import (
 // it may be subject to name and representation changes in future releases, and clients should not
 // depend on its stability. It is primarily for internal use by controllers.
 #ControllerRevision: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -1020,7 +1020,7 @@ import (
 
 // ControllerRevisionList is a resource containing a list of ControllerRevision objects.
 #ControllerRevisionList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 	// +optional

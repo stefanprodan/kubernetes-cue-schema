@@ -10,7 +10,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 // storage version.
 // +k8s:supportsSubresource="/status"
 #StorageVersionMigration: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard object metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -71,7 +71,7 @@ import metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 // StorageVersionMigrationList is a collection of storage version migrations.
 #StorageVersionMigrationList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// Standard list metadata
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata

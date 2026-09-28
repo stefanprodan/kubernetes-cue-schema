@@ -23,7 +23,7 @@ import (
 // +k8s:supportsSubresource="/status"
 // +k8s:supportsSubresource="/approval"
 #CertificateSigningRequest: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// +optional
 	metadata?: metav1.#ObjectMeta @go(ObjectMeta) @protobuf(1,bytes,opt)
@@ -257,7 +257,7 @@ import (
 
 // CertificateSigningRequestList is a collection of CertificateSigningRequest objects
 #CertificateSigningRequestList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// +optional
 	metadata?: metav1.#ListMeta @go(ListMeta) @protobuf(1,bytes,opt)
@@ -340,7 +340,7 @@ import (
 // anchors for that signer. Admission control is used to enforce that only users
 // with permissions on the signer can create or modify the corresponding bundle.
 #ClusterTrustBundle: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata contains the object metadata.
 	// +optional
@@ -392,7 +392,7 @@ import (
 
 // ClusterTrustBundleList is a collection of ClusterTrustBundle objects
 #ClusterTrustBundleList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata contains the list metadata.
 	//
@@ -409,7 +409,7 @@ import (
 // Kubelets use this API to implement podCertificate projected volumes
 // +k8s:supportsSubresource="/status"
 #PodCertificateRequest: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata contains the object metadata.
 	//
@@ -620,7 +620,7 @@ import (
 
 // PodCertificateRequestList is a collection of PodCertificateRequest objects
 #PodCertificateRequestList: {
-	TypeMeta: metav1.#TypeMeta
+	metav1.#TypeMeta
 
 	// metadata contains the list metadata.
 	//
