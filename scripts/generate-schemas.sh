@@ -23,7 +23,7 @@ echo "Generating CUE schemas for Kubernetes v1.${MINORVERSION}"
 tee go.mod >/dev/null <<EOF
 module timoni.sh/k8s
 
-go 1.26
+go 1.27
 
 require (
 	k8s.io/api ${VERSION}
@@ -51,12 +51,24 @@ cue mod init "timoni.sh/k8s"
 cue get go k8s.io/api/...
 cue get go k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1
 
-# Remove non-GA APIs.
+# Remove non-GA APIs, except the ones imported by the GA APIs.
 APIDIR="./cue.mod/gen/k8s.io/api"
-find ${APIDIR} -name 'v1alpha*' -type d -prune -exec rm -rf {} +
-find ${APIDIR} -name 'v2alpha*' -type d -prune -exec rm -rf {} +
-find ${APIDIR} -name 'v1beta*' -type d -prune -exec rm -rf {} +
-find ${APIDIR} -name 'v2beta*' -type d -prune -exec rm -rf {} +
+NONGA='v[0-9]+(alpha|beta)[0-9]*'
+KEEP=""
+while true; do
+	# Scan the GA packages and the non-GA packages kept so far.
+	SCAN=$(find ${APIDIR} -mindepth 2 -maxdepth 2 -type d | grep -vE "/${NONGA}$" || true)
+	for pkg in ${KEEP}; do SCAN="${SCAN} ${APIDIR}/${pkg}"; done
+	FOUND=$(grep -rhoE "\"k8s.io/api/[a-z0-9.]+/${NONGA}\"" ${SCAN} | tr -d '"' | sed 's|^k8s.io/api/||' | sort -u)
+	[ "${FOUND}" == "${KEEP}" ] && break
+	KEEP="${FOUND}"
+done
+for dir in $(find ${APIDIR} -mindepth 2 -maxdepth 2 -type d | grep -E "/${NONGA}$"); do
+	if ! echo "${KEEP}" | grep -qx "${dir#${APIDIR}/}"; then
+		rm -rf "${dir}"
+	fi
+done
+[ -n "${KEEP}" ] && echo "Keeping non-GA APIs imported by GA APIs: ${KEEP}"
 find ${APIDIR} -empty -type d -delete
 
 K8SDIR="./cue.mod/gen"
