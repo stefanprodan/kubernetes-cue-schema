@@ -3,6 +3,7 @@
 [![license](https://img.shields.io/github/license/stefanprodan/kubernetes-cue-schema.svg)](https://github.com/stefanprodan/kubernetes-cue-schema/blob/main/LICENSE)
 
 This repository contains a set of curated CUE schemas for the most recent Kubernetes GA APIs.
+Alpha and beta APIs are left out, unless a GA API references their types (e.g. `scheduling/v1alpha3` for the `batch/v1` Job in Kubernetes 1.37).
 These schemas are intended to be used when authoring [Timoni](https://github.com/stefanprodan/timoni) modules.
 
 ## Versioned schemas
@@ -39,6 +40,7 @@ The schema of each Kubernetes **minor version** is published to GitHub Container
 
 OCI artifacts:
 
+- `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.37`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.36`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.35`
 - `oci://ghcr.io/stefanprodan/timoni/kubernetes-schema:v1.34`
